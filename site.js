@@ -2,24 +2,6 @@
 document.body.style.backgroundColor = 'lightblue'
 document.title = "Neebin's Webpage of Stuff"
 
-/* const contacts = document.querySelectorAll('#contact, #home, #about')
-
-contacts.forEach(contact => {
-    contact.addEventListener('mouseover', () => {
-    contact.closest('nav').style.backgroundColor = 'lightblue'
-    })
-    contact.addEventListener('mouseout', () => {
-    contact.closest('nav').style.backgroundColor = ''
-    })
-}) */
-
-
-// nav.addEventListener('mouseover', (event) => {
-//     nav.style.backgroundColor = 'lightblue'
-// })
-// nav.addEventListener('mouseout', (event) => {
-//     nav.style.backgroundColor = ''
-//  })
 const nav = document.querySelector('nav')
 if (nav){
     nav.addEventListener('mouseover', (event) => {
@@ -101,3 +83,40 @@ setTimeout(() => {
     span.textContent = 'lorem ipsum'
 }, 6000)
 
+
+/* exercise 1,2 wk2, went down a rabbit hole...
+const h2 = document.querySelector('h2')
+h2.style.color = 'red'
+h2.style.textAlign = 'center'
+h2.style.fontSize = '2em'
+
+setTimeout(() => {
+h2.style.border = '2px solid black'
+h2.style.borderRadius = '5px'
+h2.style.padding = '10px'
+}, 4000) 
+
+ const link = document.querySelector('#fork')
+link.addEventListener('mouseover', () => {
+    link.style.textDecoration = 'underline'
+    link.style.color = 'red'
+})
+link.addEventListener('mouseout', () => {
+    link.style.textDecoration = ''
+    link.style.color = ''
+})
+let isBold = false
+setInterval(() => {
+    if (isBold) {
+        link.style.color = ''
+        link.style.fontWeight = 'normal'
+        link.style.textDecoration = 'none'
+        link.style.fontSize = '1rem'
+    } else {
+        link.style.color = 'green'
+        link.style.fontWeight = 'bold'
+        link.style.textDecoration = 'underline'
+        link.style.fontSize = '2rem'
+    }
+    isBold = !isBold
+}, 3000) */

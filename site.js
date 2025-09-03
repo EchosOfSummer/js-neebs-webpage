@@ -1,3 +1,67 @@
+
+document.body.style.backgroundColor = 'lightblue'
+document.title = "Neebin's Webpage of Stuff"
+
+/* const contacts = document.querySelectorAll('#contact, #home, #about')
+
+contacts.forEach(contact => {
+    contact.addEventListener('mouseover', () => {
+    contact.closest('nav').style.backgroundColor = 'lightblue'
+    })
+    contact.addEventListener('mouseout', () => {
+    contact.closest('nav').style.backgroundColor = ''
+    })
+}) */
+
+
+// nav.addEventListener('mouseover', (event) => {
+//     nav.style.backgroundColor = 'lightblue'
+// })
+// nav.addEventListener('mouseout', (event) => {
+//     nav.style.backgroundColor = ''
+//  })
+const nav = document.querySelector('nav')
+if (nav){
+    nav.addEventListener('mouseover', (event) => {
+    const target = event.target
+    let hover = target.closest('#contact')
+    if (!hover) hover = target.closest('#home')
+    if (!hover) hover = target.closest('#about')
+
+    if (hover) {
+        switch (hover.id) {
+            case 'contact':
+                hover.style.backgroundColor = 'lightgreen';
+                break;
+            case 'home':
+                hover.style.backgroundColor = 'lightyellow';
+                break;
+            case 'about':
+                hover.style.backgroundColor = 'lightcoral';
+                break;
+            default:
+                nav.style.backgroundColor = '';
+        }
+    }
+})
+nav.addEventListener('mouseout', (event) => {
+    if (!nav.contains(event.relatedTarget)) {
+        nav.style.backgroundColor = ''
+        if (contact) {
+            contact.style.backgroundColor = ''
+        }
+        if (home) {
+            home.style.backgroundColor = ''
+        }
+        if (about) {
+            about.style.backgroundColor = ''
+        }
+    }
+})
+
+}
+
+
 const link = document.querySelector('#fork')
 link.addEventListener('mouseover', () => {
     link.style.textDecoration = 'underline'
@@ -22,85 +86,18 @@ setInterval(() => {
     }
     isBold = !isBold
 }, 3000)
-/* 
-//const nav = document.querySelector('nav')
-//nav.addEventListener('mouseenter', () => {
-
-//const h1 = document.querySelector('h1')
-//h1.textContent = 'nothing special'
-//h1.style.textDecoration = 'underline'
-//h1.style.fontWeight = 'bold'
-//}) 
-
-
-//setTimeout(() => {
-
-    //const h1 = document.querySelector('h1')
-   // h1.textContent = 'nothing special'
-   // h1.style.textDecoration = 'underline'
-    //h1.style.fontWeight = 'bold'
-
-//}, 3000)
-
-// const h2 = document.querySelector('h2')
-// h2.style.backgroundColor = 'lightblue'
-// h2.style.color = 'red'
-// h2.style.textAlign = 'center'
-// h2.style.fontSize = '2em'
-
-// setTimeout(() => {
-//     h2.style.border = '2px solid black'
-//     h2.style.borderRadius = '5px'
-//     h2.style.padding = '10px'
-// }, 1000) 
-
-const aboutA = document.querySelector('#about')
-aboutA.style.color = 'orange'
-
-const contactA = document.querySelector('#contact')
-contactA.style.color = 'red'
 
 const section = document.querySelector('section')
-
 const active = section.querySelector('.active')
-active.style.color = 'brown'
-
+setTimeout(() => {
+    active.style.color = 'brown'
+}, 2000)
 const p = section.querySelector('p')
 setTimeout(() => {
     p.textContent = 'lorem ipsum'
 }, 6000)
-
 const span = section.querySelector('span')
- 
+setTimeout(() => {
+    span.textContent = 'lorem ipsum'
+}, 6000)
 
-const activeElements = document.querySelectorAll('.active')
-// add border and radius, center
-activeElements.forEach(el => {
-    el.style.border = '2px dashed red'
-    el.style.borderRadius = '5px'
-    el.style.margin = '10px'
-    el.style.padding = '10px'
-    
-})
- 
-//for (let i = 0; i < activeElements.length; i++) {
-    //activeElements[i].style.border = '2px solid red'
-   // activeElements[i].style.borderRadius = '5px'
-//}
-// add underline to footer link and have it change color on hover
-
-//link.style.textDecoration = 'underline'
-// link.addEventListener('mouseover', () => {
-//     link.style.color = 'red'
-//     link.style.textDecoration = 'underline'
-// })
-// link.addEventListener('mouseout', () => {
-//     link.style.color = ''
-//     link.style.textDecoration = ''
-// }) 
-
-
-
-// const link = document.querySelector('#fork')
-// link.style.textDecoration = 'underline'
- */
